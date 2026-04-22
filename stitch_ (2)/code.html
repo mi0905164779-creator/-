@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#3b3933",
+                    "tertiary-fixed": "#e7e2d9",
+                    "surface": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1d1c16",
+                    "outline-variant": "#c2c9bb",
+                    "outline": "#72796e",
+                    "on-primary-fixed": "#002201",
+                    "tertiary-container": "#525049",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#cac6be",
+                    "on-surface": "#1b1c1c",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#2d5a27",
+                    "on-secondary-fixed": "#351000",
+                    "on-background": "#1b1c1c",
+                    "primary-fixed": "#bcf0ae",
+                    "on-tertiary-fixed-variant": "#494740",
+                    "primary-fixed-dim": "#a1d494",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed-variant": "#7c2e00",
+                    "surface-tint": "#3b6934",
+                    "surface-variant": "#e4e2e1",
+                    "secondary-container": "#fc7127",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "primary": "#154212",
+                    "on-primary-fixed-variant": "#23501e",
+                    "inverse-primary": "#a1d494",
+                    "secondary": "#a23f00",
+                    "inverse-on-surface": "#f3f0f0",
+                    "secondary-fixed": "#ffdbcd",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb595",
+                    "on-surface-variant": "#42493e",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#9dd090",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-tertiary-container": "#c6c2ba",
+                    "background": "#fcf9f8",
+                    "on-secondary-container": "#5c2000",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "80px",
+                    "stack-lg": "48px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "stack-xs": "4px",
+                    "stack-md": "24px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "stack-sm": "12px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "caption": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Noto Serif TC"],
+                    "headline-md": ["Noto Serif TC"],
+                    "display-lg": ["Noto Serif TC"]
+            },
+            "fontSize": {
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leaf-rating {
+            font-variation-settings: 'FILL' 1;
+            color: #fc7127;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-2xl text-emerald-900 dark:text-emerald-50 docked full-width top-0 z-50 sticky border-b border-stone-200/50 dark:border-stone-800/50 shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+<div class="font-serif text-2xl font-bold text-emerald-900 dark:text-emerald-50">龍井導覽</div>
+<div class="hidden md:flex items-center gap-10 font-serif text-lg tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-all duration-300" href="#">首頁</a>
+<a class="text-emerald-900 dark:text-emerald-100 font-bold border-b-2 border-emerald-900 dark:border-emerald-100 pb-1 hover:text-emerald-700 dark:hover:text-emerald-300 transition-all duration-300" href="#">特色餐廳</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-all duration-300" href="#">交通指南</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-all duration-300" href="#">聯絡我們</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md scale-95 active:scale-90 transition-transform">
+            預約訂位
+        </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="sweeping aerial view of rolling green tea plantations in Longjing valley under a soft morning mist with golden sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrZvLxFzoJyiaq4om0Cf_asCBKgqM-yX4nAxfuioS1SQnZ0ebPP2gUBYh9WeNcvKJ9Ft5SAQvLWkcdy98WcI8jqXwdCb8BLiFDeoj38M1-ZScN2ElEgauDlaiCeE7R2gSGxRj-Seu1akTq8qkDts6K62yzd5aaCZVgxBA_NreylVKr1BFugXOfxgo60tRi1fB8pOvDwnsUOyqaONsHZylRV300qMnFi61fhSNpKcSlJZs66ZGukSpc4kDo4Xq5SQ9GN2UG5MsnRyM8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-emerald-950/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
+<span class="font-label-md text-white/90 uppercase tracking-widest mb-4 block">時令精選</span>
+<h1 class="font-display-lg text-white mb-6">探索龍井美食藝術</h1>
+<p class="font-body-lg text-white/90 mb-8">漫步於翠綠山巒，展開一場揉合數百年茶文化與現代工匠精神的味蕾之旅。</p>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-lg font-label-md hover:opacity-90 transition-opacity">探索菜單</button>
+<button class="border border-white text-white px-8 py-4 rounded-lg font-label-md hover:bg-white hover:text-emerald-900 transition-all">查看地點</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Restaurant Cards Bento-ish Grid -->
+<section class="max-w-7xl mx-auto px-8 mt-stack-xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-primary mb-4">精選餐飲地圖</h2>
+<p class="font-body-md text-on-surface-variant">我們為您挑選的每一間食府，皆致力於傳承在地文化，並提供卓越品質與寧靜的龍井氛圍。</p>
+</div>
+<div class="flex gap-2">
+<span class="font-label-md text-on-surface-variant px-4 py-2 bg-surface-container rounded-full border border-outline-variant/30">茶香入菜</span>
+<span class="font-label-md text-on-surface-variant px-4 py-2 bg-surface-container rounded-full border border-outline-variant/30">產地到餐桌</span>
+<span class="font-label-md text-on-surface-variant px-4 py-2 bg-surface-container rounded-full border border-outline-variant/30">精緻餐飲</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Azure Peak Pavilion (Large Card) -->
+<div class="md:col-span-8 group cursor-pointer bg-white rounded-xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+<div class="grid md:grid-cols-2">
+<div class="aspect-[4/5] md:aspect-auto h-full">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern minimalist glass-walled cafe overlooking lush green tea terraces with outdoor wooden deck seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz-rOqLtj_uN-_j6mPR_40esVRoGoWE5yNyaeOrx0aQSZalLRhBupwtgrdwnflqXRo6p7OvfZU3AUUS92QQLRwkqFmsFb7vvPoFDDY6zxu-Y6CIOGSwVVxgwzj4v9YuTUNIURznKfBEFO8Xix5nIwGofWcghWDuzFpiyEXfGrqO4yU5UXY6sEI3je5pOOWUhwozKXFkOUBaFfvDY_lUEwj0SB9hrYv5Q526KwosxvwcXP3MhFZboafSvucWqZvf1bK_yntG2PNzxa7"/>
+</div>
+<div class="p-8 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined leaf-rating">eco</span>
+<span class="material-symbols-outlined leaf-rating">eco</span>
+<span class="material-symbols-outlined leaf-rating">eco</span>
+<span class="material-symbols-outlined leaf-rating">eco</span>
+<span class="material-symbols-outlined text-stone-300">eco</span>
+</div>
+<h3 class="font-headline-md text-primary mb-3">雲頂景觀餐廳</h3>
+<p class="font-body-md text-on-surface-variant mb-6">座落於最高山脊的避世之所，飽覽茶園全景。以慢滴茶咖啡與植物系糕點聞名遐邇。</p>
+<div class="space-y-2">
+<p class="font-label-md text-secondary">特色體驗</p>
+<p class="font-body-md italic text-tertiary">「龍井玫瑰舒芙蕾乳酪塔配手工採摘薰衣草糖漿」</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Heritage Brews (Small Card) -->
+<div class="md:col-span-4 group cursor-pointer bg-white rounded-xl overflow-hidden border border-stone-100 shadow-sm">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="traditional chinese tea house interior with dark wood furniture, silk cushions, and delicate porcelain tea sets on low tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACJmkVs1nSDGa5eGq-pJYcJ4fEVKGLxJ3wB9briWvKXIfPOPoSC4PUr9mrjVCJQlgYLsLS8ZQ8q7Xh96PiiVfwybZPcEHfD_DRhAYEs54Sau1Wm-wHB5vJyaFBkZsgMWuGw1C9HfrWw7nEoZl6kNic67l5GKqqYg3W0kXIijbaXtm0IEgV9q36zaI_hnahgIxpDWviuopMitr9alusw6JKVVp7bUNq7-vdbju1y4UemDki3cU-Y4XikjuP-OeAXxF3CtHNa-kiiAUt"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-primary mb-2">傳承茶坊</h3>
+<p class="font-body-md text-on-surface-variant mb-4">在修復後的清代建築中，由茶藝大師演繹正宗茶道禮儀。</p>
+<span class="font-label-md text-secondary-fixed-dim bg-secondary px-3 py-1 rounded-full text-white">古法傳承</span>
+</div>
+</div>
+<!-- Emerald Umami (Standard Card) -->
+<div class="md:col-span-6 group cursor-pointer bg-white rounded-xl overflow-hidden border border-stone-100 shadow-sm">
+<div class="grid md:grid-cols-2 h-full">
+<div class="p-8 flex flex-col justify-center order-2 md:order-1">
+<h3 class="font-headline-md text-primary mb-3">翠綠鮮味</h3>
+<p class="font-body-md text-on-surface-variant mb-6">東西方廚藝在此碰撞，將龍井茶轉化為香料、煙燻與點綴，呈獻現代分子料理。</p>
+<button class="flex items-center gap-2 font-label-md text-primary hover:gap-4 transition-all">
+                            查看完整菜單 <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="h-full min-h-[300px] order-1 md:order-2">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="gourmet plated dish with smoked salmon, tea-infused foam, and edible microgreens on a handcrafted stone plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGkURIRuBsEflE3CoP2ZU6cQocGr6B9M9lUOFJVTYXMvkCNYo9MuJ7vlnpSGdtHOGcik83SnpuawECBR14oDKiwPkyy5pfuZYfY2ejx3gHVgHYFhqgS3JcBG7dlJ5PWBT2UJsT7OvN32D5306ZnySw8qdzHqDcUM_QYBz8whQcG8lP0SRvAZqXpgpPT92Xv1z9ELObr7iVS-QWDc1EuxPFt2UNEkde4iTVmS2I_8D-d83gRJ9MVh7zmwN_NW8tt63GwLVnQhftXYKG"/>
+</div>
+</div>
+</div>
+<!-- Mill & Leaf (Standard Card) -->
+<div class="md:col-span-6 group cursor-pointer bg-white rounded-xl overflow-hidden border border-stone-100 shadow-sm">
+<div class="grid md:grid-cols-2 h-full">
+<div class="h-full min-h-[300px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close-up of artisan sourdough loaves dusted with flour on a rustic wooden table with soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgU3LUibRNpWryxx2tbAlcfXm4fRL0lf-O5TD_t5rGHIk1YTx6gAzsO1qpYpBtHPhOCQKe8e1NppOXW4YtnexSODqnGu4b-hQNi3BkxMR4QhgQmDbeY0prbE6_sZWdsq5VHPGHOWH0RvpzmDDcFPx6HAe3oGs2VmPZmVk8UYBFL4rkstHZLNLxFj1t6AdZWHPNi0ZpVMYitlBkNTM0yJTemOk8jiALsdf6zJojsk1bcaZxp77Blcqy1v2zvDT4EXWSVDk1pBbdo8od"/>
+</div>
+<div class="p-8 flex flex-col justify-center">
+<h3 class="font-headline-md text-primary mb-3">磨坊與葉</h3>
+<p class="font-body-md text-on-surface-variant mb-6">一家專注於長時發酵麵團的工匠烘焙坊，選用在地時令內餡如野生蕈菇與特製豆沙。</p>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">delivery_dining</span>
+<span class="font-body-md text-on-surface-variant">提供外送服務</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="mt-stack-xl bg-surface-container-low py-stack-lg">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-stack-md text-center">
+<h2 class="font-headline-lg text-primary">指引您的品味旅程</h2>
+<p class="font-body-lg text-on-surface-variant">所有精選地點均位於步行或短途車程內，方便您規劃一日遊程。</p>
+</div>
+<div class="relative w-full h-[600px] rounded-2xl overflow-hidden border border-outline-variant shadow-lg">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="abstract artistic map style of a mountainous tea region with subtle markers and winding roads" data-location="Longjing, Hangzhou" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtKDtJtPB2ThXX7jtfkmWKbxPj570iQu5407UGmHxaHyquj39V4tHuczNnrP6ltFXPyzj95wRt9eg-cBPRgky2MpalR9fDYDncV9IwaDDlUNmQJvWCoKlSznfGGbQbYO46PCGO2K2fDoTTf8pe8JSB5xOnirTyrINsASCRwx__Q4luFqhNw2g9esclaJpnrjKWnSSkLs6Zfp6_r4-93g8wwSyWSfe6qOY9l3xffb__3xViC7rZ6ivSxve5x0IEer8PcH7LQSx3deup"/>
+<!-- Decorative Map Overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative w-full h-full">
+<!-- Marker 1 -->
+<div class="absolute top-1/4 left-1/3 p-4 bg-white rounded-lg shadow-xl border border-primary/20 pointer-events-auto flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="font-label-md text-primary">雲頂景觀</p>
+<p class="text-[10px] text-on-surface-variant">主脊路 188 號</p>
+</div>
+</div>
+<!-- Marker 2 -->
+<div class="absolute bottom-1/3 right-1/4 p-4 bg-white rounded-lg shadow-xl border border-primary/20 pointer-events-auto flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">local_cafe</span>
+</div>
+<div>
+<p class="font-label-md text-primary">傳承茶坊</p>
+<p class="text-[10px] text-on-surface-variant">古村西區</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Info Section -->
+<section class="max-w-7xl mx-auto px-8 mt-stack-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-8 bg-white border border-stone-100 rounded-xl">
+<h4 class="font-headline-md text-primary mb-6">雲頂景觀餐廳</h4>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="font-body-md">杭州市西湖區龍井路 188 號</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<p class="font-body-md">+86 571 8899 2211</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<p class="font-body-md">每日：10:00 AM - 9:00 PM</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-white border border-stone-100 rounded-xl">
+<h4 class="font-headline-md text-primary mb-6">傳承茶坊</h4>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="font-body-md">杭州市龍井中心老村步道 45 號</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<p class="font-body-md">+86 571 8833 4455</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<p class="font-body-md">週二至週日：9:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-white border border-stone-100 rounded-xl">
+<h4 class="font-headline-md text-primary mb-6">翠綠鮮味</h4>
+<div class="space-y-4 text-on-surface-variant">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="font-body-md">杭州市茶博物館路 現代館 202 室</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<p class="font-body-md">+86 571 8877 6600</p>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<p class="font-body-md">晚餐：6:00 PM - 11:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 text-emerald-900 dark:text-emerald-50 w-full py-16 px-8 mt-24 border-t border-stone-200 dark:border-stone-800 flat no shadows">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left font-serif text-base">
+<div class="space-y-6">
+<div class="font-serif text-xl font-bold text-emerald-900 dark:text-emerald-50">龍井美食藝術</div>
+<p class="text-stone-500 dark:text-stone-400">© 2024 龍井美食藝術。保留所有權利。為品味旅人精心打造。</p>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-xs text-stone-400">網站導覽</h5>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="#">隱私權政策</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="#">服務條款</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-xs text-stone-400">深入體驗</h5>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="#">在地文化遺產</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors" href="#">媒體包</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-xs text-stone-400">社群連結</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-stone-200 dark:border-stone-800 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-stone-200 dark:border-stone-800 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
